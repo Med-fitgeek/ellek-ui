@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import {
   Card,
   CardBody,
@@ -10,12 +12,25 @@ import {
   Textarea,
 } from "@material-tailwind/react";
 import { UsersIcon } from "@heroicons/react/24/solid";
-import { PageTitle, Footer } from "@/widgets/layout";
+import { PageTitle, Footer, FaqComponent } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import ClientsCarousel from "@/widgets/carousels/clients-carousel";
 
 export function Home() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
@@ -38,7 +53,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+      <section id="services" className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -102,24 +117,24 @@ export function Home() {
               </Card>
               */}
               <ClientsCarousel />
-            </div>
+            </div>            
           </div>
         </div>
       </section>
-      <section className="relative bg-blue-gray-50/50 py-24 px-4">
+      <section id="aPropos" className="relative bg-gray-50 py-24 px-4">
         <div className="container mx-auto">
           <PageTitle heading="Nos services en detail">
             Apprenez-en un peu plus sur ce que nous proposons
           </PageTitle>
-          <div className="mx-auto mt-20 mb-48 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-20 mb-15 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
               <Card
                 key={title}
                 color="transparent"
                 shadow={false}
-                className="text-center text-blue-gray-900"
+                className="text-center text-blue-gray-900 shadow-[0_10px_60px_-10px_rgba(0,0,0,0.3)] transition-transform transform hover:scale-105 py-10 px-8"
               >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
+                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400">
                   {React.createElement(icon, {
                     className: "w-5 h-5",
                   })}
@@ -133,6 +148,15 @@ export function Home() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+      <section id="faq" className="relative bg-gray-50 py-24 px-14">
+        <div className="container mx-auto">
+              <FaqComponent />
+        </div>
+      </section>
+      <section className="relative bg-gray-50 py-24 px-4">
+        <div className="container mx-auto">
           <PageTitle heading="Vous voulez travailler avec nous?">
             Completez ce formulaire et nous vous reviendrons dans les 24h qui suivent.
           </PageTitle>
@@ -146,7 +170,7 @@ export function Home() {
               Envoyer un message
             </Button>
           </form>
-        </div>
+          </div>
       </section>
       <section className="px-4 pt-20 pb-48">
         <div className="container mx-auto">

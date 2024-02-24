@@ -41,13 +41,12 @@ export function SimpleFooter({ brandName, brandLink, routes }) {
 }
 
 SimpleFooter.defaultProps = {
-  brandName: "Creative Tim",
-  brandLink: "https://www.creative-tim.com",
+  brandName: "Ellek Innovations",
+  brandLink: "https://ellek-innovations.com",
   routes: [
-    { name: "Creative Tim", path: "https://www.creative-tim.com" },
-    { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-    { name: "Blog", path: "https://www.creative-tim.com/blog" },
-    { name: "License", path: "https://www.creative-tim.com/license" },
+    { name: "Ellek Innovations", path: "https://ellek-innovations.com" },
+    { name: "About Us", path: "https://wEllek Innovations/aboutUs" },
+
   ],
 };
 

@@ -32,6 +32,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
+          {/*
           <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
             {menus.map(({ name, items }) => (
               <div key={name}>
@@ -61,6 +62,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
               </div>
             ))}
           </div>
+          */}
         </div>
         <hr className="my-6 border-gray-300" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
@@ -104,15 +106,10 @@ Footer.defaultProps = {
     {
       name: "Liens Utils",
       items: [
-        { name: "A propos de nous", path: "#" },
-        { name: "Blog", path: "#" },
+        { name: "A propos de nous", path: "#aPropos" },
         {
           name: "FAQ",
-          path: "#",
-        },
-        {
-          name: "Free Products",
-          path: "https://www.creative-tim.com/templates/free?ref=mtk",
+          path: "#faq",
         },
       ],
     },

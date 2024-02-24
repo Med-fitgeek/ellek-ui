@@ -1,8 +1,8 @@
 export const teamData = [
   {
-    img: "/img/team-1.jpg",
+    img: "/img/default_image.png",
     name: "El Hadji Amadou Thiam",
-    position: "Product Manager",
+    position: "Ingenieur Industriel",
     socials: [
       {
         color: "light-blue",
@@ -19,9 +19,9 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-2.jpg",
+    img: "/img/default_image.png",
     name: "Ndongo Medoune Ndiaye",
-    position: "CEO",
+    position: "Ingenieur logiciel",
     socials: [
       {
         color: "light-blue",
@@ -38,9 +38,9 @@ export const teamData = [
     ],
   },
   {
-    img: "/img/team-3.jpg",
+    img: "/img/default_image.png",
     name: "Cheikh Tidiane Boye",
-    position: "CTO",
+    position: "Ingenieur logiciel",
     socials: [
       {
         color: "light-blue",

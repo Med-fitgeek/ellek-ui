@@ -16,20 +16,20 @@ export const routes = [
   {
     icon: BarsArrowUpIcon,
     name: " Nos services",
-    path: "/services",
-    element: <Profile />,
+    path: "#services",
+    element: <Home />,
   },
   {
     icon: InformationCircleIcon,
     name: "A propos de nous",
-    path: "/apropos",
-    element: <SignIn />,
+    path: "#aPropos",
+    element: <Home />,
   },
   {
     icon: QuestionMarkCircleIcon,
     name: "FAQ",
-    path: "/faq",
-    element: <SignUp />,
+    path: "#faq",
+    element: <Home />,
   },
   
 ];
