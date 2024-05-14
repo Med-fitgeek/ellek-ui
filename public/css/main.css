@@ -2,3 +2,20 @@
     margin: 0;
     padding: 0;
 }
+
+/* Styles spécifiques au formulaire de contact sur mobile */
+@media (max-width: 768px) {
+    .contact-form {
+      padding: 10px; /* Ajuste le padding pour les petits écrans */
+    }
+  
+    .contact-form .flex {
+      flex-direction: column; /* Change la disposition des éléments flex pour le formulaire uniquement */
+    }
+  
+    .input, 
+    .textarea {
+      width: 100%; /* Assure que les inputs prennent toute la largeur */
+    }
+  }
+  

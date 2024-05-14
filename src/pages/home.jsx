@@ -14,6 +14,8 @@ import { PageTitle, Footer, FaqComponent } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import ClientsCarousel from "@/widgets/carousels/clients-carousel";
+import ContactForm from '@/widgets/layout/contact-form';
+import ScrollToTop from '@/widgets/layout/scrool-to-top';
 
 export function Home() {
 
@@ -33,7 +35,7 @@ export function Home() {
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
         <div className="absolute top-0 h-full w-full bg-[url('/img/teamSpirit.jpg')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/70 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
@@ -51,7 +53,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <section id="services" className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ color, title, icon, description }) => (
@@ -89,37 +91,12 @@ export function Home() {
               </Typography>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
-              {/*
-              <Card className="shadow-lg shadow-gray-500/10">
-                <CardHeader className="relative h-56">
-                  <img
-                    alt="Card Image"
-                    src="/img/teamwork.jpeg"
-                    className="h-full w-full"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h5"
-                    color="blue-gray"
-                    className="mb-3 font-bold"
-                  >
-                    Top Notch Services
-                  </Typography>
-                  <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
-                  </Typography>
-                </CardBody>
-              </Card>
-              */}
               <ClientsCarousel />
             </div>            
           </div>
         </div>
       </section>
-      <section id="aPropos" className="relative bg-gray-50 py-24 px-4">
+      <section id="services" className="relative bg-gray-50 py-24 px-4">
         <div className="container mx-auto">
           <PageTitle heading="Nos services en detail">
             Apprenez-en un peu plus sur ce que nous proposons
@@ -158,19 +135,10 @@ export function Home() {
           <PageTitle heading="Vous voulez travailler avec nous?">
             Completez ce formulaire et nous vous reviendrons dans les 24h qui suivent.
           </PageTitle>
-          <form className="mx-auto mt-12 max-w-3xl text-center">
-            <div className="mb-8 flex gap-8">
-              <Input variant="standard" size="lg" label="Nom complet" />
-              <Input variant="standard" size="lg" label="Adresse e-mail" />
-            </div>
-            <Textarea variant="standard" size="lg" label="Message" rows={8} />
-            <Button variant="gradient" size="lg" className="mt-8">
-              Envoyer un message
-            </Button>
-          </form>
+          <ContactForm/>
           </div>
       </section>
-      <section className="px-4 pt-20 pb-48">
+      <section id="aPropos" className="px-4 pt-20 pb-48">
         <div className="container mx-auto">
           <PageTitle heading="Nos fondateurs">
           Notre entreprise est fondée par des jeunes visionnaires et travailleurs, qui s'efforcent de relever les défis les plus ardus en proposant des solutions innovantes pour répondre aux besoins de notre clientèle.
@@ -199,6 +167,7 @@ export function Home() {
       <div className="bg-blue-gray-50/50">
         <Footer />
       </div>
+      <ScrollToTop />
     </>
   );
 }

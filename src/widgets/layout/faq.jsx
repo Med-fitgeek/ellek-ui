@@ -30,10 +30,10 @@ const data = {
 
 const styles = {
     bgColor: '#ffffff', // Fond blanc
-    titleTextColor: "#4F46E5", // Couleur de texte pour le titre en bleu indigo
+    titleTextColor: "#0999EB", // Couleur de texte pour le titre en bleu indigo
     rowTitleColor: "#1F2937", // Couleur de texte pour les titres des éléments en gris foncé
     rowContentColor: "#4B5563", // Couleur de texte pour le contenu en gris
-    arrowColor: "#4F46E5", // Couleur des flèches en bleu indigo
+    arrowColor: "#0999EB", // Couleur des flèches en bleu indigo
 };
 
 const config = {
