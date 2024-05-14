@@ -64,7 +64,7 @@ export function Navbar({ brandName, routes, action, socials }) {
     <MTNavbar color="transparent" className="p-3">
       <div className="container mx-auto flex items-center justify-between text-white">
         <Link to="/" style={{maxWidth: '90px'}}>
-          <img src="public/img/Logo_simple.png" alt="logo" />
+          <img src="/img/Logo_simple.png" alt="logo" />
         </Link>
         <div className="hidden lg:block">{navList}</div>
         <div className="hidden gap-2 lg:flex">
