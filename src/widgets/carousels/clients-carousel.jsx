@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-    '/img/black-farmer.webp',
-    '/img/black-tailor.webp',
-    '/img/black-businessman.webp',
-    '/img/wood-artisan.webp',
-    
-  ];
+  `/img/black-farmer.webp?${new Date().getTime()}`,
+  `/img/black-tailor.webp?${new Date().getTime()}`,
+  `/img/black-businessman.webp?${new Date().getTime()}`,
+  `/img/wood-artisan.webp?${new Date().getTime()}`,
+];
 
 const ClientsCarousel = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -23,7 +22,6 @@ const ClientsCarousel = () => {
     );
   };
 
-  // Fonction pour passer à l'image suivante toutes les 2 secondes
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex(currentIndex => (currentIndex + 1) % images.length);
