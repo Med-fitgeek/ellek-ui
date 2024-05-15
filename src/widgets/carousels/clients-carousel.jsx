@@ -25,13 +25,12 @@ const ClientsCarousel = () => {
 
   // Fonction pour passer à l'image suivante toutes les 2 secondes
   useEffect(() => {
-    const interval = setInterval(nextImage, 3000);
-
-    // Nettoyer l'intervalle lorsque le composant est démonté
-    return () => {
-      clearInterval(interval);
-    };
-  }, [currentImageIndex]);
+    const interval = setInterval(() => {
+      setCurrentImageIndex(currentIndex => (currentIndex + 1) % images.length);
+    }, 3000);
+  
+    return () => clearInterval(interval);
+  }, []); 
 
   return (
     <div className="relative">
