@@ -34,8 +34,8 @@ export function Home() {
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-        <div className="absolute top-0 h-full w-full bg-[url('/img/teamSpirit.jpg')] bg-cover bg-center" />
-        <div className="absolute top-0 h-full w-full bg-black/60 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-[url('/img/teamSpirit.webp')] bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-black/40 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
@@ -46,7 +46,7 @@ export function Home() {
               >
                 Ëllëk Innovations
               </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
+              <Typography variant="lead" color="white" className="opacity-100">
                 Une entreprise tournée vers l'avenir grace a notre expertise technologique
               </Typography>
             </div>

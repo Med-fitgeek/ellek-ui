@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const images = [
-    '/img/black-farmer.jpg',
-    '/img/black-tailor.jpg',
-    '/img/black-businessman.jpg',
-    '/img/wood-artisan.jpg',
+    '/img/black-farmer.webp',
+    '/img/black-tailor.webp',
+    '/img/black-businessman.webp',
+    '/img/wood-artisan.webp',
     
   ];
 
