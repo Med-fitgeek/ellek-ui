@@ -56,6 +56,25 @@ export const teamData = [
       },
     ],
   },
+  {
+    img: "/img/default_image.png",
+    name: "Amadou Niane",
+    position: "Serial Entrepreneur",
+    socials: [
+      {
+        color: "light-blue",
+        name: "twitter",
+      },
+      {
+        color: "blue",
+        name: "facebook",
+      },
+      {
+        color: "purple",
+        name: "instagram",
+      },
+    ],
+  },
 ];
 
 export default teamData;
